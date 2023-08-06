@@ -1,4 +1,4 @@
-package com.nx.nxr.ui.theme
+package com.nx.nxr.ui
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
