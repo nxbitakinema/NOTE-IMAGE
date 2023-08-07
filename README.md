@@ -5,18 +5,14 @@ note and photo app use CRUD, Room database, and someting clean architecture...
 
 Features
 
-## Android Architecture Components:
+## Android Architecture Components
 * [ViewModel][5]
 * [Navigation][12]
 
-## Dependency Injection:
+## Dependency Injection
 * [Hilt for Android][6]
 
-## Asynchronous Programming:
-* [Kotlin Coroutines][7]
-* [Asynchronous Flow][8]
-
-## Other Android Components:
+## Other Android Components
 * [Jetpack Compose][9]
 * [Room][13]
 
