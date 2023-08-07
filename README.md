@@ -3,7 +3,7 @@ note and photo app use CRUD, Room database, and someting clean architecture...
 
 ![alt text](https://i.ibb.co/CWrFhfS/NXR1.jpg)
 
-Features
+## Features
 
 ## Android Architecture Components
 * [ViewModel][5]
