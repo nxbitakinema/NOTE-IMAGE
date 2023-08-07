@@ -1,5 +1,5 @@
 # NXR
-note and photo app usu CRUD, Room database, and someting clean architecture...
+note and photo app use CRUD, Room database, and someting clean architecture...
 
 ![alt text](https://i.ibb.co/CWrFhfS/NXR1.jpg)
 
