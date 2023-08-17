@@ -5,13 +5,14 @@ import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
@@ -34,30 +35,35 @@ fun ScreenDetail(
     onEditClicked: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
-    var screen2 by remember { mutableStateOf(FakePlaceHolder) }
+    var screen by remember { mutableStateOf(FakePlaceHolder) }
 
     LaunchedEffect(true) {
         scope.launch(Dispatchers.IO) {
-            screen2 = appViewModel.getVIEWMODELs(nxrId) ?: FakePlaceHolder
+            screen = appViewModel.getVIEWMODELs(nxrId) ?: FakePlaceHolder
         }
     }
+
     Scaffold(
         topBar = {
             NxAppbar(
-                title = screen2.title,
+                title = screen.title,
                 icon = {
                     Icon(
                         Icons.Outlined.Add,
                         contentDescription = "edit") },
                 onIconClick = { onEditClicked() },
-                iconState = true
+                iconState = true,
+
             )
         }
     ) {
         Column(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(start = 10.dp, end = 10.dp, bottom = 10.dp)
         ) {
-            screen2.let { screen2 ->
+            screen.let { screen2 ->
                 if (!screen2.imageUri.isNullOrEmpty()) {
                     Image(
                         painter = rememberAsyncImagePainter(
@@ -68,27 +74,28 @@ fun ScreenDetail(
                         contentDescription = null,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
+                            .clip(RoundedCornerShape(4.dp))
                             .fillMaxWidth()
-                            .height(250.dp)
+                            .height(375.dp)
                     )
                 }
-                Text(
-                    text = screen2.dateUpdated,
-                    fontSize = 10.sp,
-                    color = Color.Gray,
-                    modifier = Modifier
-                        .padding(start = 8.dp, top = 8.dp, bottom = 6.dp, end = 8.dp)
-                )
+//                Text(
+//                    text = screen2.dateUpdated,
+//                    fontSize = 10.sp,
+//                    color = Color.Gray,
+//                    modifier = Modifier
+//                        .padding(start = 8.dp, top = 8.dp, bottom = 6.dp, end = 8.dp)
+//                )
+                Spacer(modifier = Modifier.height(10.dp))
                 Text(
                     text = screen2.text,
                     fontSize = 14.sp,
-                    color = Color.Gray,
+                    color = MaterialTheme.colors.primaryVariant,
                     lineHeight = 1.7.em,
                     textAlign = TextAlign.Justify,
-                    modifier = Modifier
-                        .padding(start = 8.dp, end = 8.dp)
-                        .verticalScroll(rememberScrollState())
                 )
+                Spacer(modifier = Modifier.height(10.dp))
+
             }
         }
     }

@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 
 
 @Composable
@@ -20,7 +21,12 @@ fun NxAppbar(
     TopAppBar(
         modifier = modifier,
         backgroundColor = MaterialTheme.colors.surface,
-        title = { Text(text = title) },
+        title = {
+            Text(
+                text = title,
+                fontWeight = FontWeight.Bold
+            )
+        },
         actions = {
             if (icon != null) {
                 IconButton(

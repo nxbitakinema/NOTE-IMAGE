@@ -7,7 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
@@ -39,7 +39,7 @@ fun BoxListItem(
     val context = LocalContext.current
 
     Box(
-        modifier = Modifier.height(140.dp)
+        modifier = Modifier.height(80.dp)
     ) {
         Column(
             modifier = Modifier
@@ -70,7 +70,7 @@ fun BoxListItem(
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
                             .padding(top = 2.dp, end = 8.dp)
-                            .clip(CutCornerShape(2.dp))
+                            .clip(RoundedCornerShape(2.dp))
                             .height(80.dp)
                             .width(80.dp)
                     )
