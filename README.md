@@ -1,5 +1,5 @@
 # NXR
-note and photo app use CRUD, Room database, and someting clean architecture...
+build in jatpack compose. use room database save image and text
 
 https://github.com/nxbitakinema/NXR/assets/93174599/37848dc6-f430-40a7-be08-7e94f3f4f572
 
