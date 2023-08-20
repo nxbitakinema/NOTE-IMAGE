@@ -1,7 +1,7 @@
 # NXR
 note and photo app use CRUD, Room database, and someting clean architecture...
 
-![alt text](https://i.ibb.co/CWrFhfS/NXR1.jpg)
+https://github.com/nxbitakinema/NXR/assets/93174599/37848dc6-f430-40a7-be08-7e94f3f4f572
 
 ## Features
 
