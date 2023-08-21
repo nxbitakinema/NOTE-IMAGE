@@ -1,7 +1,10 @@
 # NXR
 build in jatpack compose. use room database save image and text
 
-https://github.com/nxbitakinema/NXR/assets/93174599/37848dc6-f430-40a7-be08-7e94f3f4f572
+
+https://github.com/nxbitakinema/NXR/assets/93174599/b241c2b4-bf41-4cb1-ba50-43695eb2cf49
+
+
 
 ## Features
 
