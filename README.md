@@ -4,6 +4,8 @@ build in jatpack compose. use room database save image and text
 
 https://github.com/nxbitakinema/NXR/assets/93174599/b241c2b4-bf41-4cb1-ba50-43695eb2cf49
 
+![R1](https://github.com/nxbitakinema/NXR/assets/93174599/82d3aab3-3471-4df3-830e-258e815fb208)
+![R2](https://github.com/nxbitakinema/NXR/assets/93174599/d516071a-3b0e-45da-aa66-542ad1346e09)
 
 
 ## Features
